@@ -1,5 +1,9 @@
 [![trophy](https://github-profile-trophy.vercel.app/?username=mdandyc&theme=flat)](https://github.com/ryo-ma/github-profile-trophy)
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=mdandyc&label=Profile%20views&color=0e75b6&style=flat" alt="mdandyc" /> </p>
 
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=mdandyc&show_icons=true&locale=en&layout=compact" alt="mdandyc" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=mdandyc&show_icons=true&locale=en" alt="mdandyc" /></p>
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mdandyc&" alt="mdandyc"></p>
 <!--
 **mdandyc/mdandyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
