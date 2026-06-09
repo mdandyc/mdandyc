@@ -1,0 +1,57 @@
+name: Metrics
+on:
+  # Run automatically every 24 hours
+  schedule: [{cron: "0 0 * * *"}]
+  # Allows manual triggering from the Actions tab
+  workflow_dispatch:
+  # Run on every push to the main/master branch
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # You will need to create a Personal Access Token (PAT) 
+          # with 'repo', 'read:user', and 'read:org' scopes, 
+          # and add it to your repo secrets as METRICS_TOKEN.
+          token: ${{ secrets.METRICS_TOKEN }}
+          
+          # Output file name
+          filename: github-metrics.svg
+          
+          # Configuration and Layout
+          user: mdandyc
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Jakarta
+          
+          # Achievements Plugin (Replaces Trophies)
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_secrets: yes
+          plugin_achievements_threshold: C
+          
+          # Languages Plugin (Replaces Top Languages)
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+          
+          # Coding Habits Plugin (Extra insights)
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          
+          # Lines of Code Plugin
+          plugin_lines: yes
